@@ -1,0 +1,11 @@
+package com.te.lms.service;
+
+import java.util.Optional;
+
+import com.te.lms.entity.dto.NewMentorDto;
+
+public interface AdminService {
+
+	Optional<Integer> registerMentor(NewMentorDto newMentorDto);
+
+}

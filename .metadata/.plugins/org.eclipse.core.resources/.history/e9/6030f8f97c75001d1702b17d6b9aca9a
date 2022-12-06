@@ -1,0 +1,23 @@
+package com.te.lms.controller;
+
+import java.util.Optional;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.te.lms.entity.dto.NewMentorDto;
+import com.te.lms.response.ApiResponse;
+import com.te.lms.service.AdminService;
+
+import lombok.RequiredArgsConstructor;
+@RequiredArgsConstructor
+@RestController
+public class AdminController {
+	private final AdminService adminService;
+	public ApiResponse<String> registerMentor(@RequestBody NewMentorDto newMentorDto) {
+		Optional<String> mentorId=adminService.registerMentor(newMentorDto);
+		
+		return null;
+	}
+	
+}

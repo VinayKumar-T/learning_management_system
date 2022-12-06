@@ -1,0 +1,62 @@
+package com.te.lms.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import com.google.common.collect.Lists;
+import com.te.lms.entity.AddressDetails;
+import com.te.lms.entity.BankDetails;
+import com.te.lms.entity.EducationDetails;
+import com.te.lms.entity.Employee;
+import com.te.lms.entity.SecondaryInfo;
+import com.te.lms.entity.dto.BankDetailsDto;
+import com.te.lms.entity.dto.ContactDto;
+import com.te.lms.entity.dto.EducationDetailsDto;
+import com.te.lms.entity.dto.EmployeeDto;
+import com.te.lms.entity.dto.ExperienceDto;
+import com.te.lms.entity.dto.SecondaryInfoDto;
+import com.te.lms.entity.dto.TechnicalSkillsDto;
+import com.te.lms.repository.EmployeeRepository;
+import com.te.lms.service.EmployeeService;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	private final EmployeeRepository employeeRepository;
+
+	@Override
+	public Optional<String> register(EmployeeDto employeeDto) {
+		Employee employee = new Employee();
+		SecondaryInfo secondaryInfo = new SecondaryInfo();
+		BankDetails bankDetails = new BankDetails();
+		List<EducationDetails> educationDetails = Lists.newArrayList();
+		List<AddressDetails> addressDetails = Lists.newArrayList();
+		List<TechnicalSkillsDto> technicalSkills = Lists.newArrayList();
+		List<ExperienceDto> experience = Lists.newArrayList();
+		List<ContactDto> contact = Lists.newArrayList();
+
+		BeanUtils.copyProperties(employeeDto, employee);
+		BeanUtils.copyProperties(employeeDto.getSecondaryInfoDto(), secondaryInfo);
+		BeanUtils.copyProperties(employeeDto.getBankDetailsDto(), bankDetails);
+
+		for (EducationDetailsDto educationDetailsDto : employeeDto.getEducationDetailsDto()) {
+			EducationDetails ed = new EducationDetails();
+			BeanUtils.copyProperties(educationDetailsDto, ed);
+			ed.setEmployee(employee);
+
+			educationDetails.add(ed);
+			}	
+		employee.setEducationDetails(educationDetails);
+		
+		
+		
+		
+		return null;
+	}
+
+}
