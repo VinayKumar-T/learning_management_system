@@ -1,0 +1,10 @@
+
+‰	java:S116,"RRename this field "EndDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êâœöûÿÿÿÿ8»Ž¼ÙÎ0HùRMINORZ
+CODE_SMELL
+p
+java:S1128
+"=Remove this unused import 'javax.persistence.GeneratedValue'.(¤®À‚8ú¥ŽæÎ0H…RMINORZ
+CODE_SMELL
+p
+java:S1128"=Remove this unused import 'javax.persistence.GenerationType'.(ý÷õ¡8ú¥ŽæÎ0H‡RMINORZ
+CODE_SMELL

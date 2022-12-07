@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 public class ApiResponse<T> {
 	private  String message;
-	private  LocalDateTime date;
+	private  LocalDateTime date=LocalDateTime.now();
 	private  T data;
 	public ApiResponse(String message, T data) {
 		super();

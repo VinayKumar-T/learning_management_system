@@ -1,0 +1,31 @@
+package com.te.lms.entity.dto;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+import com.google.common.collect.Lists;
+import com.te.lms.entity.Mentor;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+public class TechnologiesDto {
+	private String technology;
+	private List<Mentor> mentor=Lists.newArrayList();
+	
+}

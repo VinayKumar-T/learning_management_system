@@ -1,4 +1,4 @@
-package com.te.lms.entity;
+ package com.te.lms.entity;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.google.common.collect.Lists;
 
@@ -16,6 +17,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
@@ -24,14 +26,17 @@ import lombok.Setter;
 @Entity
 public class Mentor {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
-	private String mentorName;
 	private String mentorEmployeeId;
-	private String mentorEmailId;
-	@OneToMany(mappedBy = "mentor", cascade = CascadeType.ALL)
+	private String mentorName;
 
-	private List<Skills> skills=Lists.newArrayList();
 	
+	private String mentorEmailId;
+	
+	private String status;
 
+	@OneToMany(mappedBy = "mentor", cascade = CascadeType.ALL)
+	private List<Skills> skills = Lists.newArrayList();
+
+	@OneToOne(mappedBy = "mentor", cascade = CascadeType.ALL)
+	private Batch batch;
 }

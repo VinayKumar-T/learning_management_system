@@ -1,0 +1,24 @@
+
+w
+java:S1854E"?Remove this useless assignment to local variable "savedmentor".(¤²ÖŒûÿÿÿÿ8¢²ÜŞÎ0HñRMAJORZ
+CODE_SMELL
+l
+java:S3655I";Call "mentorFromDb.isPresent()" before accessing the value.(û‰ØÉÿÿÿÿÿ8¯éŞÎ0HöRMAJORZBUG
+r
+java:S1854r"@Remove this useless assignment to local variable "technologies".(¸ÁŒ;8ôæÎ0HŒRMAJORZ
+CODE_SMELL
+l
+java:S3655N";Call "mentorFromDb.isPresent()" before accessing the value.(§ ÿÿÿÿÿ8™ÉÊáÎ0HóRMAJORZBUG
+c
+java:S1481r"1Remove this unused "technologies" local variable.(¸ÁŒ;8ôæÎ0HRMINORZ
+CODE_SMELL
+h
+java:S1481E"0Remove this unused "savedmentor" local variable.(¤²ÖŒûÿÿÿÿ8²©ĞŞÎ0HôRMINORZ
+CODE_SMELL
+l
+java:S2789w"@Methods with an "Optional" return type should never return null.(¥¹ï8ÜåàåÎ0H÷RMAJORZBUG
+s	java:S125t"<This block of commented-out lines of code should be removed.(œÀ«¡ÿÿÿÿÿ8£³‘æÎ0H”RMAJORZ
+CODE_SMELL
+‚
+java:S1128"JRemove this unused import 'com.te.lms.repository.UpdateMentorRepositorty'.(­……éÿÿÿÿÿ8£³‘æÎ0H•RMINORZ
+CODE_SMELL

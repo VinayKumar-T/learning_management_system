@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.te.lms.entity.Mentor;
 @Repository
-public interface MentorRepositorty extends JpaRepository<Mentor,Integer>{
+public interface MentorRepositorty extends JpaRepository<Mentor,String>{
 
 }

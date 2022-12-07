@@ -2,8 +2,7 @@ package com.te.lms.entity.dto;
 
 import java.util.List;
 
-import com.te.lms.entity.Skills;
-import com.te.lms.entity.Technologies;
+import com.google.common.collect.Lists;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,10 +18,10 @@ import lombok.Setter;
 
 public class NewMentorDto {
 	
-	private Integer id;
+
 	private String mentorName;
 	private String mentorEmployeeId;
 	private String mentorEmailId;
-	private List<SkillsDto> skillsDto;
+	private List<SkillsDto> skillsDto=Lists.newArrayList();
 	
 }

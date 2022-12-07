@@ -56,4 +56,6 @@ public class Employee {
 	private List<Experience> experience=Lists.newArrayList();
 	@OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
 	private List<Contact> contact;
+	
+	private String status;
 }

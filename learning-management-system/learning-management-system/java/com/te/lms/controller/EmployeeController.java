@@ -13,21 +13,21 @@ import com.te.lms.service.EmployeeService;
 import com.te.lms.service.RequestListService;
 
 import lombok.RequiredArgsConstructor;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(path = "/public")
 public class EmployeeController {
 	private final EmployeeService employeeService;
 	private final RequestListService requestListService;
+
 	@PostMapping(path = "/employee/register")
 	public ApiResponse<String> registerEmployee(@RequestBody EmployeeDto employeeDto) {
-	Optional<String> employeeId=employeeService.register(employeeDto);
-	if(employeeId.isPresent()) {
-		requestListService.addToRequestList(employeeId.get());
-	}
-	
-	
-	
+		Optional<String> employeeId = employeeService.register(employeeDto);
+		if (employeeId.isPresent()) {
+			requestListService.addToRequestList(employeeId.get());
+		}
+
 		return new ApiResponse<String>("your request will be approved in sometime, please wait", null);
 	}
 }

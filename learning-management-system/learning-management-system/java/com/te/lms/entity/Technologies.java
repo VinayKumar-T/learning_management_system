@@ -29,8 +29,10 @@ import lombok.Setter;
 public class Technologies {
 	@Id
 	private String technology;
-	@ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-	@JoinTable(name = "mentor_technologies",joinColumns = @JoinColumn(name="technology_fk"),inverseJoinColumns = @JoinColumn(name="mentor_fk"))
-	private List<Mentor> mentor=Lists.newArrayList();
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "map_technology_batch", joinColumns = @JoinColumn(name = "technology_fk"), inverseJoinColumns = @JoinColumn(name = "batch_fk"))
+	private List<Batch> batch = Lists.newArrayList();
+
 	
 }
