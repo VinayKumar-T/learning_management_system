@@ -1,21 +1,46 @@
 
-x	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(ÖîŒà8ÑåàÎ0H£RMAJORZ
+‘
+java:S2293<"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ş¿Èıùÿÿÿÿ8¦¢ëŠÏ0H€RMINORZ
 CODE_SMELL
-Š
-java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ş¿ÈıùÿÿÿÿHÉRMINORZ
+}	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Æ ıøÿÿÿÿ8©ÃñŞÎ0HñRMAJORZ
 CODE_SMELL
-q	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(£¦ñÅHÇRMAJORZ
-CODE_SMELL
+h
+java:S3655l"7Call "batchDto.isPresent()" before accessing the value.(¶Ñ¬ùÿÿÿÿ8”ˆÃˆÏ0HıRMAJORZBUG
 Œ
-java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(²ªËğ8¤º¥ÚÎ0HËRMINORZ
-CODE_SMELL
-w	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(­“8¤º¥ÚÎ0HÆRMAJORZ
-CODE_SMELL
-x	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(£¦ñÅ8©ÃñŞÎ0HRMAJORZ
+java:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(²ªËğ8¤º¥ÚÎ0HìRMINORZ
 CODE_SMELL
 ‘
-java:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯¶øÒşÿÿÿÿ8ÑåàÎ0H¤RMINORZ
+java:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(¶Ñ¬ùÿÿÿÿ8”ˆÃˆÏ0HöRMINORZ
+CODE_SMELL
+‘
+java:S2293z"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ú ¦³üÿÿÿÿ8”ˆÃˆÏ0HøRMINORZ
 CODE_SMELL
 Œ
-java:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆíØš8©ÃñŞÎ0H‚RMINORZ
+java:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(•ü‰Ù8©ÃñŞÎ0HêRMINORZ
+CODE_SMELL
+x	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(£¦ñÅ8”ˆÃˆÏ0HõRMAJORZ
+CODE_SMELL
+Š
+java:S1128"RRemove this unused import 'org.springframework.web.bind.annotation.DeleteMapping'.(­ìÎªşÿÿÿÿ8ÛÇÛÏ0H©RMINORZ
+CODE_SMELL
+q	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(ÿüõİHéRMAJORZ
+CODE_SMELL
+x	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(ÖîŒà8”ˆÃˆÏ0HôRMAJORZ
+CODE_SMELL
+d
+java:S3655E"8Call "mentorDto.isPresent()" before accessing the value.(’ºş¦8”ˆÃˆÏ0HüRMAJORZBUG
+Œ
+java:S2293E"YReplace the type specification in this constructor call with the diamond operator ("<>").(’ºş¦8”ˆÃˆÏ0HúRMINORZ
+CODE_SMELL
+x	java:S112\"FDefine and throw a dedicated exception instead of using a generic one.(£¦ñÅ8¦¢ëŠÏ0HÿRMAJORZ
+CODE_SMELL
+‘
+java:S2293Z"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯¶øÒşÿÿÿÿ8ÑåàÎ0HîRMINORZ
+CODE_SMELL
+x	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(èÜğÃ8ÑåàÎ0HğRMAJORZ
+CODE_SMELL
+…
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆíØšHòRMINORZ
+CODE_SMELL
+x	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(–Œ­Ä8°©íÏ0HÁRMAJORZ
 CODE_SMELL

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.te.lms.entity.RequestList;
 @Repository
-public interface RequestRepository extends JpaRepository<RequestList, Integer> {
+public interface RequestRepository extends JpaRepository<RequestList, String> {
 
 }

@@ -1,0 +1,10 @@
+
+p
+java:S1128	"=Remove this unused import 'javax.persistence.GenerationType'.(ύχυ΅8¤η€‰Ο0HµRMINORZ
+CODE_SMELL
+p
+java:S1128"=Remove this unused import 'javax.persistence.GeneratedValue'.(¤®ΐ‚8¤η€‰Ο0H³RMINORZ
+CODE_SMELL
+…
+java:S1128"MRemove this unused import 'org.checkerframework.common.aliasing.qual.Unique'.(πλή¨ÿÿÿÿÿ8Υ‰Ο0HΌRMINORZ
+CODE_SMELL

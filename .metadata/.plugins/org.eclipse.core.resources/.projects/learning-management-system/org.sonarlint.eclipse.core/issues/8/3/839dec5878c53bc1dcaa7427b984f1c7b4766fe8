@@ -1,10 +1,13 @@
 
-‰	java:S116,"RRename this field "EndDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êâœöûÿÿÿÿ8»Ž¼ÙÎ0HùRMINORZ
-CODE_SMELL
 p
 java:S1128
-"=Remove this unused import 'javax.persistence.GeneratedValue'.(¤®À‚8ú¥ŽæÎ0H…RMINORZ
+"=Remove this unused import 'javax.persistence.GeneratedValue'.(¤®À‚8ú¥ŽæÎ0HùRMINORZ
 CODE_SMELL
 p
-java:S1128"=Remove this unused import 'javax.persistence.GenerationType'.(ý÷õ¡8ú¥ŽæÎ0H‡RMINORZ
+java:S1128"=Remove this unused import 'javax.persistence.GenerationType'.(ý÷õ¡8ú¥ŽæÎ0HûRMINORZ
+CODE_SMELL
+‰	java:S116-"RRename this field "EndDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êâœöûÿÿÿÿ8»Ž¼ÙÎ0HýRMINORZ
+CODE_SMELL
+p
+java:S1128"8Remove this unused import 'javax.persistence.ManyToOne'.(ÇÑ²Žøÿÿÿÿ8ýê„ŠÏ0HŸRMINORZ
 CODE_SMELL

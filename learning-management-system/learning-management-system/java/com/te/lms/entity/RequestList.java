@@ -26,12 +26,11 @@ import lombok.Setter;
 @Entity
 public class RequestList {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	@Unique
+
 	private String employeeId;
 	private String employeeName;
 	private LocalDate employeeYop;
+
 	private Double employeePercentage;
 
 	private Integer employeeExperience;

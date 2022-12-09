@@ -12,8 +12,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.google.common.collect.Lists;
 import com.te.lms.entity.enums.BatchStatus;
 
 import lombok.AllArgsConstructor;
@@ -27,9 +30,7 @@ import lombok.Setter;
 @Entity
 public class Batch {
 	@Id
-	private Integer id;
-	
-	private String bathchId;
+private String bathchId;
 	
 	private String batchName;
 	@OneToOne
@@ -45,6 +46,9 @@ public class Batch {
 	@Enumerated(EnumType.STRING)
 	private BatchStatus batchStatus;
 	
-
+	private String status;
+	
+	@OneToMany(mappedBy = "batch")
+	private List<Employee> employee=Lists.newArrayList();
 
 }

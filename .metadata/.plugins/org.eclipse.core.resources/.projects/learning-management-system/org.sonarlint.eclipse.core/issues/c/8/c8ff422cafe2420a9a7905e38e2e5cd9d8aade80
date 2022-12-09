@@ -1,0 +1,20 @@
+
+j
+java:S1128	"9Remove this unused import 'javax.persistence.Enumerated'.(¡ùþßûÿÿÿÿHˆRMINORZ
+CODE_SMELL
+f
+java:S1128"5Remove this unused import 'javax.persistence.Entity'.(úƒßýûÿÿÿÿH„RMINORZ
+CODE_SMELL
+e
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿH‚RMINORZ
+CODE_SMELL
+h
+java:S1128"7Remove this unused import 'javax.persistence.EnumType'.(ˆ«¨–üÿÿÿÿH†RMINORZ
+CODE_SMELL
+]
+java:S1128
+"1Remove this unused import 'javax.persistence.Id'.(þ¹ÞÜHŠRMINORZ
+CODE_SMELL
+e
+java:S1128"4Remove this unused import 'javax.persistence.Table'.(˜øŒ“øÿÿÿÿHŒRMINORZ
+CODE_SMELL

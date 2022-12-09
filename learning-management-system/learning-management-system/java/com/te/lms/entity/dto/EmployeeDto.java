@@ -31,11 +31,13 @@ public class EmployeeDto {
 	
 	private String employeeName;
 	
+
+	
 	private LocalDate dateOfJoining;
 	
 	private LocalDate dateOfBirth;
 	
-	private String emailId;
+	private String employeeEmailId;
 	
 	private String bloodGroup;
 	

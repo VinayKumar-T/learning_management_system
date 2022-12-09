@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.te.lms.entity.Batch;
 @Repository
-public interface BatchRepository extends JpaRepository<Batch, Integer>{
+public interface BatchRepository extends JpaRepository<Batch, String>{
 
 }

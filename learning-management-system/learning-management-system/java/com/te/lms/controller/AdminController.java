@@ -1,8 +1,10 @@
 package com.te.lms.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -10,8 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.te.lms.entity.Batch;
+import com.te.lms.entity.Mentor;
+import com.te.lms.entity.dto.ApproveDto;
+import com.te.lms.entity.dto.MessageDto;
 import com.te.lms.entity.dto.NewBatchDto;
 import com.te.lms.entity.dto.NewMentorDto;
+import com.te.lms.entity.dto.RejectDto;
 import com.te.lms.mailconfig.Notify;
 import com.te.lms.response.ApiResponse;
 import com.te.lms.service.AdminService;
@@ -33,7 +40,7 @@ public class AdminController {
 			String subject = "Congratulations";
 			String emailId = newMentorDto.getMentorEmailId();
 			notify.sendEmail(message, emailId, subject);
-			return new ApiResponse<String>("mentor has been registered successfully", mentor.get());
+			return new ApiResponse<String>("mentor has been registered successfully", message);
 		}
 
 		throw new RuntimeException("unable to register the mentor");
@@ -45,21 +52,35 @@ public class AdminController {
 		if (mentor.isPresent()) {
 			return new ApiResponse<String>("mentor details updated", mentor.get());
 		}
-		throw new RuntimeException("unable to update details");
+		throw new RuntimeException("unable to update mentor details");
 	}
-	
-	
+
 	@PutMapping(path = "/deletementor/{mentorId}")
 	public ApiResponse<String> deleteMentor(@PathVariable("mentorId") String mentorId) {
-		Optional<String> mentor=adminService.deleteMentor(mentorId);
-		if(mentor.isPresent()) {
+		Optional<String> mentor = adminService.deleteMentor(mentorId);
+		if (mentor.isPresent()) {
 			return new ApiResponse<String>("mentor deleted", mentorId);
 
 		}
 		throw new RuntimeException("unable to delete");
 	}
+
+	@GetMapping(path = "/searchmentor/{mentorId}")
+	public ApiResponse<Object> searchMentor(@PathVariable("mentorId") String mentorId) {
+		Optional<NewMentorDto> mentorDto = adminService.read(mentorId);
+		return new ApiResponse<Object>("mentor returned", mentorDto.get());
+	}
+	@GetMapping(path = "/getmentors")
+	public Optional<List<NewMentorDto>> listOfMentors() {
+		Optional<List<NewMentorDto>> mentors=adminService.getMentors();
+		if(mentors.isPresent()) {
+			return mentors;
+		}
+	throw new RuntimeException("no mentors found");	
+	}
 	
 	
+
 /////--------------------------------------------------------------------------------------->	
 
 	@PostMapping(path = "/registerbatch")
@@ -73,11 +94,85 @@ public class AdminController {
 		throw new RuntimeException("unable to register the mentor");
 
 	}
+
 	@PutMapping(path = "/updatebatch")
 	public ApiResponse<String> updateBatch(@RequestBody NewBatchDto newBatchDto) {
-		Optional<String>	batch=adminService.updateBatch(newBatchDto);
-		
-	return null;	
+		Optional<String> batch = adminService.updateBatch(newBatchDto);
+		if (batch.isPresent()) {
+			return new ApiResponse<String>("batch details updated", batch.get());
+		}
+		throw new RuntimeException("unable to update batch details");
+	}
+
+	@GetMapping(path = "/searchbatch/{batchId}")
+	public ApiResponse<Object> searchBatch(@PathVariable("batchId") String batchId) {
+		Optional<NewBatchDto> batchDto = adminService.readBatch(batchId);
+		return new ApiResponse<Object>("batch returned", batchDto.get());
 	}
 	
+	@GetMapping("/getbatches")
+	public Optional<List<NewBatchDto>>  listOfBatches() {
+	Optional<List<NewBatchDto>> batch	=adminService.getBatches();
+		return batch;
+	}
+	
+	@PutMapping(path = "/deletebatch/{batchId}")
+	public ApiResponse<String> deleteBatch(@PathVariable("batchId") String batchId) {
+		Optional<String> batch = adminService.deleteBatch(batchId);
+		if (batch.isPresent()) {
+			return new ApiResponse<String>("batch deleted", batch.get());
+
+		}
+		throw new RuntimeException("batch unable to delete");
+	}
+	
+	
+	
+	
+
+//_-------------------------------------------------------------------------------------------->
+	@PostMapping(path = "/approve/employee/{employeeId}")
+	public ApiResponse<String> approveEmployee(@PathVariable("employeeId") String employeeId,
+			@RequestBody ApproveDto approveDto) {
+		Optional<MessageDto> message = adminService.approve(employeeId, approveDto);
+		
+		if(message.isPresent()) {
+			String msg=message.get().getMessage();
+			String subject="Welcome to technoeleveate";
+			String emailId=message.get().getEmailId();
+			notify.sendEmail(msg, emailId, subject);
+			return new ApiResponse<String>(emailId, "  has been approved");
+			
+		}
+
+		throw new RuntimeException("unable to approve");
+
+	}
+	@PostMapping(path = "/reject/employee/{employeeId}")
+	public ApiResponse<String> RejectEmployee(@PathVariable("employeeId") String employeeId,
+			@RequestBody RejectDto rejectDto) {
+		Optional<MessageDto> message = adminService.reject(employeeId, rejectDto);
+		
+		if(message.isPresent()) {
+			String msg=message.get().getMessage();
+			String subject="Reject mail";
+			String emailId=message.get().getEmailId();
+			notify.sendEmail(msg, emailId, subject);
+			return new ApiResponse<String>(emailId, "  has been rejected");
+			
+		}
+
+		throw new RuntimeException("unable to reject");
+
+	}
+	
+	
+	
+	
+	
+//-----------------------------------------------------------------------------------------------
+	
+	
+	
+
 }
