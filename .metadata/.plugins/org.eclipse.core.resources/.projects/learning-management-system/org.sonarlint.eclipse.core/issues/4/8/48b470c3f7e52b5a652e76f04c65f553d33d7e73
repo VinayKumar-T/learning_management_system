@@ -1,9 +1,0 @@
-
-h
-java:S1128"5Remove this unused import 'com.te.lms.entity.Mentor'.(’á³8¼ú÷ÚÎ0HıRMINORZ
-CODE_SMELL
-‰	java:S116 "RRename this field "EndDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êâœöûÿÿÿÿ8ÓÈ¨ÙÎ0HÿRMINORZ
-CODE_SMELL
-n
-java:S1128";Remove this unused import 'com.te.lms.entity.Technologies'.(‰“ƒ³8×§àÙÎ0H€RMINORZ
-CODE_SMELL

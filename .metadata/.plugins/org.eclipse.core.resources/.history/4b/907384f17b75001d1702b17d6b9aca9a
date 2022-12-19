@@ -1,5 +1,0 @@
-package com.te.lms.service;
-
-public interface AdminService {
-
-}

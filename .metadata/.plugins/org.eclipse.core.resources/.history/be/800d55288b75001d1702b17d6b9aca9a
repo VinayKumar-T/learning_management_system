@@ -1,9 +1,0 @@
-package com.te.lms.mailconfig;
-
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-public class Notify {
-	
-	
-}
